@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Kelas 03 PGSD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Logo Popup Overlay -->
+    <div class="logo-popup" id="logoPopup">
+        <img src="logo kelas png.png" alt="Logo Kelas 03" class="logo-popup-image">
+    </div>
+
+    <!-- Background Layers -->
+    <div class="bg-layer bg-layer-1"></div>
+    <div class="bg-layer bg-layer-2"></div>
+    <div class="bg-layer bg-layer-3"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">KELASSANTAI.03</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="Profil Kelas.html">Profil Kelas</a></li>
+            <li><a href="Acara kelas.html">Acara Kelas</a></li>
+            <li><a href="Kontak.html">Kontak</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-bg">
+            <div class="hero-bg-gradient"></div>
+            <div class="hero-bg-glow"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Pendidikan Guru Sekolah Dasar</span>
+            </div>
+            
+            <h1>Kelas 03 <span class="highlight">PGSD</span></h1>
+            
+            <p class="hero-tagline">"Cerita Kita, Tersimpan Selamanya"</p>
+            
+            <p class="hero-subtitle">
+                Haii! Selamat datang di website <span class="highlight">Kelas 03 PGSD</span> — tempat kita nyimpen semua cerita dari yang serius sampai yang paling random.
+            </p>
+            
+            <div class="hero-cta">
+                <a href="Profil Kelas.html" class="cta-button">
+                    <i class="fas fa-users"></i>
+                    Kenali Kelas Kami
+                </a>
+                <a href="Acara kelas.html" class="cta-button secondary">
+                    <i class="fas fa-calendar"></i>
+                    Lihat Acara
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Kelas 03 – Pendidikan Guru Sekolah Dasar</h2>
+            <p class="footer-tagline">"Cerita Kita, Tersimpan Selamanya"</p>
+            <p class="footer-username">@kelassantai</p>
+            
+            <div class="footer-divider"></div>
+            
+            <p class="footer-bottom">
+                Made with <i class="fas fa-heart"></i> by Kelas 03 PGSD
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Logo Popup
+        const logoPopup = document.getElementById('logoPopup');
+        const navLogo = document.querySelector('.nav-logo');
+
+        if (navLogo && logoPopup) {
+            navLogo.style.cursor = 'pointer';
+            
+            navLogo.addEventListener('click', (e) => {
+                e.preventDefault();
+                logoPopup.classList.add('active');
+                
+                // Hide after 2 seconds
+                setTimeout(() => {
+                    logoPopup.classList.remove('active');
+                }, 2000);
+            });
+
+            // Close on click outside
+            logoPopup.addEventListener('click', () => {
+                logoPopup.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

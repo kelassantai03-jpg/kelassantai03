@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Kelas 03 PGSD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Logo Popup Overlay -->
+    <div class="logo-popup" id="logoPopup">
+        <img src="logo kelas png.png" alt="Logo Kelas 03" class="logo-popup-image">
+    </div>
+
+    <!-- Background Layers -->
+    <div class="bg-layer bg-layer-1"></div>
+    <div class="bg-layer bg-layer-2"></div>
+    <div class="bg-layer bg-layer-3"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">KELASSANTAI.03</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="Profil Kelas.html">Profil Kelas</a></li>
+            <li><a href="Acara kelas.html">Acara Kelas</a></li>
+            <li><a href="Kontak.html" class="active">Kontak</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="page-content">
+        <div class="section-header">
+            <h2>Hubungi Kami</h2>
+            <p>Terhubung dengan Kelas 03 PGSD</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="card contact-card whatsapp">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p class="contact-label">Chat dengan kami</p>
+                <p class="contact-value">0881010388248</p>
+                <a href="https://wa.me/62881010388248" class="contact-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    Hubungi via WhatsApp
+                </a>
+            </div>
+
+            <div class="card contact-card instagram">
+                <div class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3>Instagram</h3>
+                <p class="contact-label">Ikuti kami di media sosial</p>
+                <p class="contact-value">@pgsd03.official</p>
+                <a href="https://instagram.com/pgsd03.official" class="contact-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    Follow di Instagram
+                </a>
+            </div>
+
+            <div class="card contact-card email">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p class="contact-label">Kirim pesan ke kami</p>
+                <p class="contact-value">kelassantai.03@gmail.com</p>
+                <a href="mailto:kelassantai.03@gmail.com" class="contact-link">
+                    <i class="fas fa-paper-plane"></i>
+                    Kirim Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Kelas 03 – Pendidikan Guru Sekolah Dasar</h2>
+            <p class="footer-tagline">"Cerita Kita, Tersimpan Selamanya"</p>
+            <p class="footer-username">@kelassantai</p>
+            
+            <div class="footer-divider"></div>
+            
+            <p class="footer-bottom">
+                Made with <i class="fas fa-heart"></i> by Kelas 03 PGSD
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Logo Popup
+        const logoPopup = document.getElementById('logoPopup');
+        const navLogo = document.querySelector('.nav-logo');
+
+        if (navLogo && logoPopup) {
+            navLogo.style.cursor = 'pointer';
+            
+            navLogo.addEventListener('click', (e) => {
+                e.preventDefault();
+                logoPopup.classList.add('active');
+                
+                setTimeout(() => {
+                    logoPopup.classList.remove('active');
+                }, 2000);
+            });
+
+            logoPopup.addEventListener('click', () => {
+                logoPopup.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

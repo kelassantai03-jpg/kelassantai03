@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakar-Bakar Bersama - Kelas 03 PGSD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Logo Popup Overlay -->
+    <div class="logo-popup" id="logoPopup">
+        <img src="logo kelas png.png" alt="Logo Kelas 03" class="logo-popup-image">
+    </div>
+
+    <!-- Background Layers -->
+    <div class="bg-layer bg-layer-1"></div>
+    <div class="bg-layer bg-layer-2"></div>
+    <div class="bg-layer bg-layer-3"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">KELASSANTAI.03</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="Profil Kelas.html">Profil Kelas</a></li>
+            <li><a href="Acara kelas.html" class="active">Acara Kelas</a></li>
+            <li><a href="Kontak.html">Kontak</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Article Section -->
+    <section class="page-content article-section">
+        <div class="article-container">
+            <!-- Article Header Image -->
+            <div class="article-header">
+                <img src="Untitled design.jpg" alt="Bakar-Bakar Kelas 03 PGSD" class="article-image" style="aspect-ratio: 4000/2250;">
+                <div class="article-image-overlay"></div>
+                <div class="article-header-content">
+                    <span class="article-category"><i class="fas fa-fire"></i> Kegiatan Kelas</span>
+                    <h1>Bakar-Bakar Santai Kelas 03 PGSD</h1>
+                    <div class="article-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 31 Januari 2026</span>
+                        <span><i class="fas fa-clock"></i> 19.00 WIB</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Rumah Sasa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Content -->
+            <div class="article-body">
+                <p class="article-lead">
+                    Tanggal 31 Januari 2026, Kelas 03 PGSD Semester 2 ngadain acara bakar-bakar santai di rumah Sasa. 
+                    Acara dimulai dari jam 19.00 WIB sampai selesai, dan jujur aja… ini bukan sekadar makan-makan biasa.
+                </p>
+
+                <p>
+                    Suasananya pecah banget! Dari yang awalnya cuma kumpul biasa, jadi penuh cerita, tawa, dan momen random yang nggak bakal dilupain. 
+                    Semua ikut ambil bagian, mulai dari siapin makanan sampai bakar-bakaran bareng.
+                </p>
+
+                <h2><i class="fas fa-heart"></i> Kebersamaan yang Terasa</h2>
+                
+                <p>
+                    Yang paling kerasa itu kebersamaannya. Nggak ada jarak, semuanya nyatu. Dari ngobrol santai, bercanda, sampai momen-momen kecil yang justru jadi kenangan paling berharga.
+                </p>
+
+                <blockquote class="article-quote">
+                    "Karena kadang, momen sederhana justru yang paling berkesan."
+                </blockquote>
+
+                <p>
+                    Acara ini jadi bukti kalau Kelas 03 PGSD bukan cuma sekadar teman kuliah, tapi juga keluarga kecil yang selalu punya cerita di setiap pertemuan.
+                </p>
+
+                <!-- Back Button -->
+                <a href="Acara kelas.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Kembali ke Acara Kelas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Kelas 03 – Pendidikan Guru Sekolah Dasar</h2>
+            <p class="footer-tagline">"Cerita Kita, Tersimpan Selamanya"</p>
+            <p class="footer-username">@kelassantai</p>
+            
+            <div class="footer-divider"></div>
+            
+            <p class="footer-bottom">
+                Made with <i class="fas fa-heart"></i> by Kelas 03 PGSD
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Logo Popup
+        const logoPopup = document.getElementById('logoPopup');
+        const navLogo = document.querySelector('.nav-logo');
+
+        if (navLogo && logoPopup) {
+            navLogo.style.cursor = 'pointer';
+            
+            navLogo.addEventListener('click', (e) => {
+                e.preventDefault();
+                logoPopup.classList.add('active');
+                
+                setTimeout(() => {
+                    logoPopup.classList.remove('active');
+                }, 2000);
+            });
+
+            logoPopup.addEventListener('click', () => {
+                logoPopup.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>

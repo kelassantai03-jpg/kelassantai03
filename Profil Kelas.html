@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kelas - Kelas 03 PGSD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Logo Popup Overlay -->
+    <div class="logo-popup" id="logoPopup">
+        <img src="logo kelas png.png" alt="Logo Kelas 03" class="logo-popup-image">
+    </div>
+
+    <!-- Background Layers -->
+    <div class="bg-layer bg-layer-1"></div>
+    <div class="bg-layer bg-layer-2"></div>
+    <div class="bg-layer bg-layer-3"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">KELASSANTAI.03</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="Profil Kelas.html" class="active">Profil Kelas</a></li>
+            <li><a href="Acara kelas.html">Acara Kelas</a></li>
+            <li><a href="Kontak.html">Kontak</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Profil Kelas Section -->
+    <section id="profil" class="page-content">
+        <div class="section-header">
+            <h2>Profil Kelas PGSD</h2>
+            <p>Kenali lebih dekat dengan Kelas 03 PGSD</p>
+        </div>
+
+        <!-- Identitas Kelas -->
+        <div class="profile-grid">
+            <div class="card identity-card">
+                <h3><i class="fas fa-id-card"></i> Identitas Kelas</h3>
+                <div class="identity-item">
+                    <span class="identity-label">Program Studi</span>
+                    <span class="identity-value">Pendidikan Guru Sekolah Dasar (PGSD)</span>
+                </div>
+                <div class="identity-item">
+                    <span class="identity-label">Tahun Masuk</span>
+                    <span class="identity-value">1 September 2025</span>
+                </div>
+                <div class="identity-item">
+                    <span class="identity-label">Semester Saat Ini</span>
+                    <span class="identity-value">Semester 2</span>
+                </div>
+                <div class="identity-item">
+                    <span class="identity-label">Jumlah Semester Dilalui</span>
+                    <span class="identity-value">1 Semester</span>
+                </div>
+            </div>
+
+            <div class="card dosen-card">
+                <h3><i class="fas fa-chalkboard-teacher"></i> Pembimbing Akademik</h3>
+                <div class="dosen-avatar">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h4 style="margin: 1rem 0 0.5rem;">IBU ANI RESTUNINGSIH</h4>
+                <p style="color: var(--text-secondary);">Pembimbing Akademik</p>
+            </div>
+
+            <div class="card struktur-card">
+                <h3><i class="fas fa-sitemap"></i> Struktur Organisasi</h3>
+                <div class="struktur-item">
+                    <i class="fas fa-crown"></i>
+                    <div>
+                        <div class="role">Ketua Kelas</div>
+                        <div class="name">ALFA SOFFYAN N.A</div>
+                    </div>
+                </div>
+                <div class="struktur-item">
+                    <i class="fas fa-file-alt"></i>
+                    <div>
+                        <div class="role">Sekretaris</div>
+                        <div class="name">-</div>
+                    </div>
+                </div>
+                <div class="struktur-item">
+                    <i class="fas fa-wallet"></i>
+                    <div>
+                        <div class="role">Bendahara</div>
+                        <div class="name">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistik Mahasiswa Section -->
+        <div class="stats-section">
+            <h3 class="stats-title"><i class="fas fa-users"></i> Komposisi Mahasiswa</h3>
+            <div class="stats-grid">
+                <!-- Card Mahasiswa (Laki-laki) -->
+                <div class="card stats-card mahasiswa-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <div class="stats-number">
+                        <span class="counter" data-target="5">0</span>
+                    </div>
+                    <h4>Mahasiswa</h4>
+                    <p>Laki-laki</p>
+                </div>
+
+                <!-- Card Mahasiswi (Perempuan) -->
+                <div class="card stats-card mahasiswi-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="stats-number">
+                        <span class="counter" data-target="27">0</span>
+                    </div>
+                    <h4>Mahasiswa</h4>
+                    <p>Perempuan</p>
+                </div>
+
+                <!-- Card Total -->
+                <div class="card stats-card total-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stats-number">
+                        <span class="counter" data-target="32">0</span>
+                    </div>
+                    <h4>Total</h4>
+                    <p>Seluruh Mahasiswa</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deskripsi Kelas -->
+        <div class="deskripsi-section">
+            <div class="card deskripsi-card">
+                <h3><i class="fas fa-book-open"></i> Deskripsi Kelas</h3>
+                <p>
+                    Kelas PGSD ini merupakan kelompok mahasiswa yang sedang menempuh pendidikan untuk menjadi calon guru sekolah dasar yang profesional. Sejak memulai perkuliahan pada <strong>1 September 2025</strong>, kelas ini telah melewati semester pertama dengan berbagai proses adaptasi terhadap dunia perkuliahan.
+                </p>
+                <p>
+                    Saat ini, di semester kedua, mahasiswa mulai lebih aktif dalam kegiatan akademik seperti diskusi, presentasi, serta pengenalan dasar keterampilan mengajar.
+                </p>
+
+                <!-- Perjalanan Akademik -->
+                <h3 style="margin-top: 2rem;"><i class="fas fa-route"></i> Perjalanan Akademik</h3>
+                <div class="perjalanan-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-badge">Semester 1</span>
+                        <p class="timeline-content">Adaptasi dunia perkuliahan & pengenalan dasar pendidikan</p>
+                    </div>
+                    <div class="timeline-item sem2">
+                        <span class="timeline-badge">Semester 2</span>
+                        <p class="timeline-content">Pendalaman materi & mulai aktif dalam kegiatan akademik</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visi Misi -->
+        <div class="visi-misi-grid">
+            <div class="card visi-card">
+                <h3><i class="fas fa-star"></i> Visi Kelas</h3>
+                <p>
+                    "Menjadi kelas PGSD yang aktif, solid, dan berkembang dalam mencetak calon guru sekolah dasar yang profesional dan berkarakter."
+                </p>
+            </div>
+
+            <div class="card misi-card">
+                <h3><i class="fas fa-bullseye"></i> Misi Kelas</h3>
+                <ul class="misi-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mengembangkan kemampuan akademik mahasiswa</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Meningkatkan kerja sama dan solidaritas antar anggota kelas</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mendorong kreativitas dalam proses pembelajaran</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Membentuk sikap disiplin dan tanggung jawab</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Harapan -->
+        <div class="card harapan-card">
+            <h3><i class="fas fa-heart"></i> Harapan</h3>
+            <p>
+                Dengan semangat kebersamaan dan belajar yang tinggi, diharapkan seluruh mahasiswa kelas PGSD ini mampu berkembang menjadi calon guru yang kompeten dan siap menghadapi dunia pendidikan di masa depan.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Kelas 03 – Pendidikan Guru Sekolah Dasar</h2>
+            <p class="footer-tagline">"Cerita Kita, Tersimpan Selamanya"</p>
+            <p class="footer-username">@kelassantai</p>
+            
+            <div class="footer-divider"></div>
+            
+            <p class="footer-bottom">
+                Made with <i class="fas fa-heart"></i> by Kelas 03 PGSD
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        let hasAnimated = false;
+        
+        const animateCounters = () => {
+            if (hasAnimated) return;
+            hasAnimated = true;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        };
+
+        // Intersection Observer to trigger animation when section is visible
+        const statsSection = document.querySelector('.stats-section');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // Fallback: Also trigger animation after a short delay
+        setTimeout(() => {
+            if (!hasAnimated) {
+                animateCounters();
+            }
+        }, 500);
+
+        // Logo Popup
+        const logoPopup = document.getElementById('logoPopup');
+        const navLogo = document.querySelector('.nav-logo');
+
+        if (navLogo && logoPopup) {
+            navLogo.style.cursor = 'pointer';
+            
+            navLogo.addEventListener('click', (e) => {
+                e.preventDefault();
+                logoPopup.classList.add('active');
+                
+                setTimeout(() => {
+                    logoPopup.classList.remove('active');
+                }, 2000);
+            });
+
+            logoPopup.addEventListener('click', () => {
+                logoPopup.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
